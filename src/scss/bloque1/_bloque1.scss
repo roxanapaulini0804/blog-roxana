@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
+    overflow: visible;
 }
 
 .bloque1DesktopImage {
@@ -163,11 +164,12 @@
         display: flex;
         position: relative;
         overflow: visible !important;
+        
         @include m.tablet_768 {
             display: flex;
             h3 {
                 margin: 0;
-                font-size: 1.5rem;
+                font-size: 1.7rem;
                 font-weight: 700;
                 cursor: pointer; // Agrega cursor interactivo
                 transition: color 0.3s ease;
@@ -177,7 +179,7 @@
               }
             }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .dropdown-menu {
                 display: none !important; /* Oculta el menú */
             }
@@ -201,19 +203,17 @@
         .dropdown-menu {
             display: block; // 
             position: absolute;
-            top: 100%;
+            top:250%;
             left: 0;
-            background-color: #0fad1d;
-            border: 1px solid #ddd;
+            background-color: #000000;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
             list-style: none;
             padding: 10px 0;
             margin: 0; // Ajusta márgenes para evitar espacios
             min-width: 150px;
             z-index: 9999;
             overflow: visible !important;
-        
+           
             /* Transición y estados iniciales */
             opacity: 0;
             transform: translateY(-10px); // Mueve ligeramente hacia arriba
@@ -224,7 +224,7 @@
               padding: 10px 20px;
               a {
                 text-decoration: none;
-                color: #333;
+                color: #ffffff;
                 font-size: 1.3rem;
                 display: block;
                 transition: background-color 0.2s ease, color 0.2s ease;
@@ -350,7 +350,7 @@
         padding: 8rem 0 10rem 0;
     }
     h3, p {
-        color: black;
+        color: #000000;
         margin: 0;
     }
     h3 {
