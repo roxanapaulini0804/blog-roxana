@@ -755,35 +755,69 @@
 // }
 
 .bloque2DesktopCards {
-    display: none;
+    display: none; /* Oculto por defecto */
     @include m.tablet_768 {
-        display: flex;
+        display: grid; /* Cambiar a grid para diseño dinámico */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tabletas */
+        gap: 20px; /* Espaciado entre tarjetas */
         width: 100%;
-        background-color: purple;
-        height: auto;
-        // padding: 2rem 0;
-        gap: 2rem;
-        flex-wrap: wrap;
+        padding: 20px; /* Espaciado interno */
+        background-color: #fff; /* Fondo del contenedor */
     }
+
+    @include m.desktop_1020 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
     @include m.desktop_1200 {
-        gap: 3rem;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px; /* Más espaciado entre tarjetas */
+    }
+
+    @include m.desktop_1400 {
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 .bloque2DesktopCardsItem {
-    background-color: orange;
-    height: 33rem;
-    width: 21.5rem;
-    @include m.desktop_1020 {
-        width: 28.35rem;
-        height: 37rem;
+    background-color: #F0F0F0; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    overflow: hidden; /* Evitar contenido desbordado */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    transition: transform 0.2s ease-in-out; /* Efecto de zoom al pasar el mouse */
+
+    &:hover {
+        transform: scale(1.02); /* Efecto de zoom */
     }
-    @include m.desktop_1200 {
-        width: 34.85rem;
-        height: 42rem;
+
+    img {
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover; /* Ajustar la imagen sin deformarla */
+        border-top-left-radius: 10px; /* Bordes redondeados en la parte superior */
+        border-top-right-radius: 10px;
     }
-    @include m.desktop_1400 {
-        width: 41.35rem;
-        height: 48rem;
+
+    .content {
+        padding: 15px; /* Espaciado interno */
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Espaciado entre elementos de texto */
     }
+
+    .content h3 {
+        font-size: 1rem;
+        margin: 0;
+        color: #333; /* Texto oscuro */
+    }
+
+    .content p {
+        font-size: 0.9rem;
+        margin: 0;
+        color: #666; /* Texto gris */
+    }
+
+    
 }
