@@ -43,7 +43,7 @@
 }
 
 .bloque2ContainerProgram {
-    background-color: red;
+    //background-color: red;
     @include m.tablet_768 {
         width: 100%;
         // flex-direction: row;
@@ -297,9 +297,12 @@
     justify-content: center;
     @include m.tablet_768 {
         width: 32%;
+       
         // background-color: red;
-        background-image: none !important;
+       
+        background-image: none!important;
         min-height: 33rem;
+       
         // width: calc(33.3% - 5rem);    
     }
     @include m.desktop_1020 {
@@ -314,27 +317,108 @@
     
 }
 
+// .bloque2BannerDesktop {
+//     // display: none;
+//     @include m.tablet_768 {
+//         display: flex;
+//         height: 100%;
+//         margin: 0;
+//         display: flex;
+//         align-items: flex-end;
+//     }
+//     .bloque2BannerDesktopImage {
+//         display: none;
+//         @include m.tablet_768 {
+//             display: block;   
+//         }
+//         width: 100%;
+//         height: 20rem;
+//         @include m.desktop_1020 {
+//             height: 23rem;
+            
+//         }
+//     }
+// }
+
 .bloque2BannerDesktop {
-    // display: none;
-    @include m.tablet_768 {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .bloque2BannerDesktop {
         display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin: 0 auto; 
         height: 100%;
-        margin: 0;
-        display: flex;
-        align-items: flex-end;
     }
+
+    p {
+        text-align: center;
+        margin-bottom: 20px; 
+        font-size: 1rem;
+        color: black;
+    }
+
+    .bloque2RedesSociales {
+        display: flex;
+        justify-content: center; 
+        gap: 25px; 
+        margin-top: 15px; 
+        margin-bottom: 20px; 
+    }
+
+    .bloque2RedesSociales img {
+        width: 50px; 
+        height: 50px;
+        
+    }
+
+   
+
     .bloque2BannerDesktopImage {
-        display: none;
-        @include m.tablet_768 {
-            display: block;   
-        }
-        width: 100%;
-        height: 20rem;
-        @include m.desktop_1020 {
-            height: 23rem;
-        }
+        display: block;
+        width: 100%; 
+        height: 20rem; 
+        object-fit: cover; 
     }
 }
+
+/* Para pantallas medianas */
+@include m.tablet_768 {
+    .bloque2BannerDesktop {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    p {
+        font-size: 1.8rem; 
+    }
+
+    .bloque2RedesSociales img {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .bloque2BannerDesktopImage {
+        height: 20rem; 
+    }
+}
+
+/* Para pantallas grandes */
+@include m.desktop_1020 {
+    .bloque2BannerDesktop {
+        max-width: 1200px; 
+        margin: 0 auto; 
+    }
+
+    .bloque2BannerDesktopImage {
+        height: 30rem; 
+        width: 100%; 
+    }
+}
+
+
 
 .bloque2ContainerProgram {}
 
@@ -360,16 +444,16 @@
 }
 
 /* ============================SLIDER 2 program =============================*/
-// .bloque1Slider {
-//     // background-color: green;
-//     height: auto;
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     row-gap: 3rem;
-//     overflow: hidden;
-//     padding-bottom: 1rem;
-// }
+ .bloque1Slider {
+    // background-color: green;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
 
 .slider__container5 {
     height: auto;
@@ -502,12 +586,19 @@
     // background-color: purple;
     display: flex;
     justify-content: center;
+
+    @include m.tablet_768 {
+        justify-content: flex-end;
+    
+    }
     h3 {
         font-size: 1.5rem;
         font-weight: 500;
         width: 13rem;
         // background-color: red;
         border-bottom: 2px solid black;
+        
+       
     }
 }
 
@@ -762,7 +853,8 @@
         grid-template-columns: repeat(2, 1fr); 
         gap: 20px; 
         width: 100%;
-        padding: 20px; 
+        //padding: 20px; 
+         padding: 10px;
         background-color: #fff; 
     }
 
