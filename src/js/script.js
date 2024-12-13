@@ -1,3 +1,4 @@
+
 window.addEventListener("load", () => {
 
     var slider2 = new Swiper(".mySwiper2", {
@@ -96,7 +97,7 @@ window.addEventListener("load", () => {
             }
         }
     });
-     
+        
 
     let iconOpen = document.querySelector('.top-icon-mobile');
     let menuOpen = document.querySelector('.manuInner');
@@ -115,7 +116,7 @@ window.addEventListener("load", () => {
 
     let categories = document.querySelector('.bloque1SelectProgram');
     let aparition = document.querySelector('.bloque1SelectProgramContent');
-    
+
     categories.addEventListener("click", () => {
         aparition.classList.toggle('activeSelect');
     })
@@ -203,7 +204,17 @@ window.addEventListener("load", () => {
         saludCategorieDesktop.classList.toggle('bloque1SelectProgramContentItemTopActive');
     })
 
+    //=================================================================================================================
+    //=================================================================================================================
+
+
+
+    let clickerIndex = document.querySelector('.indexclicker');
+    let indexContent = document.querySelector('.bloque6LeftIndexContent');
+
+    clickerIndex.addEventListener('click', () => {
+        alert("hice click")
+        // indexContent.classList.add('bloque6LeftIndexBlock');
+    })
+
 })
-
-
-

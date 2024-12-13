@@ -354,7 +354,7 @@
     }
 
     p {
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px; 
         font-size: 1rem;
         color: black;
@@ -738,13 +738,14 @@
     }
 }
 
+
 .bloque7 {
     display: none;
     height: auto;
     display: flex;
     justify-content: center;
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 45%, rgba(239,239,239,1) 45%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 58%, rgba(239,239,239,1) 58%);
     padding: 3rem 0;
     width: 100%;
     @include m.tablet_768 {
@@ -757,6 +758,7 @@
 
 .bloque7Individual {
     background: none;
+    padding: 0 !important;
     @include m.tablet_768 {
         padding: 0;
         margin-bottom: 5rem;

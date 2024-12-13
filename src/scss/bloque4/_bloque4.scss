@@ -43,7 +43,7 @@
 
 .bloque4Banner {
     height: 27rem;
-    background-image: url('../img/individual-banner-carrera.webp') !important;
+    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/individual-banner-carrera-1-scaled.webp') !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@
     row-gap: 1rem;
     padding: 0 2rem;
     @include m.tablet_768 {
-        background-image: url('../img/individual-banner-carrera-desktop.webp') !important;
+        background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/individual-banner-carrera-desktop-1-scaled.webp') !important;
         height: 12rem;
         background-position: 5% center;
         flex-direction: row;
@@ -107,7 +107,7 @@
         h5 {
             color: white;
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         img {
             filter: brightness(0) saturate(100%) invert(99%) sepia(24%) saturate(0%) hue-rotate(142deg) brightness(109%) contrast(100%);
